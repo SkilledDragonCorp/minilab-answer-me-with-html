@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-10-13T15:16:19.114Z",
+  "lab": "SkilledDragonCorp/minilab-answer-me-with-html",
+  "upstream_package": {
+    "name": "answer-me-with-html",
+    "version": "0.5.2",
+    "sha": "4da5ae89ac435683110aa1b8707d9d4170184c55"
+  },
+  "versions": {
+    "bun": "1.4.2",
+    "node": "24.14.1",
+    "gitleaks": "8.30.1"
+  },
+  "keyless": {
+    "enforced": true,
+    "stripped_env_vars": 2,
+    "api_keys_used": 0
+  },
+  "note": "input_bytes = draft Markdown bytes; html_bytes = normalized `am render` HTML bytes (colophon timestamp replaced). Local fixtures are compared byte-for-byte to fixtures/golden/*.html.",
+  "golden_tests": {
+    "command": "bun run test",
+    "status": "pass",
+    "passed": 4,
+    "failed": 0,
+    "duration_ms": 219
+  },
+  "fixture_count": 5,
+  "local_fixture_count": 1,
+  "upstream_example_count": 4,
+  "goldens_matching": 1,
+  "largest": [
+    {
+      "id": "ste100",
+      "input_bytes": 4971,
+      "html_bytes": 117978,
+      "ratio": 23.73
+    },
+    {
+      "id": "tcp",
+      "input_bytes": 1869,
+      "html_bytes": 109642,
+      "ratio": 58.66
+    },
+    {
+      "id": "architecture",
+      "input_bytes": 1445,
+      "html_bytes": 106471,
+      "ratio": 73.68
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "ste100",
+      "source": "upstream-example",
+      "path": "node_modules/answer-me-with-html/examples/ste100.md",
+      "input_bytes": 4971,
+      "html_bytes": 117978,
+      "ratio": 23.73,
+      "golden_match": null
+    },
+    {
+      "id": "tcp",
+      "source": "upstream-example",
+      "path": "node_modules/answer-me-with-html/examples/tcp.md",
+      "input_bytes": 1869,
+      "html_bytes": 109642,
+      "ratio": 58.66,
+      "golden_match": null
+    },
+    {
+      "id": "architecture",
+      "source": "upstream-example",
+      "path": "node_modules/answer-me-with-html/examples/architecture.md",
+      "input_bytes": 1445,
+      "html_bytes": 106471,
+      "ratio": 73.68,
+      "golden_match": null
+    },
+    {
+      "id": "tcp.en",
+      "source": "upstream-example",
+      "path": "node_modules/answer-me-with-html/examples/tcp.en.md",
+      "input_bytes": 1314,
+      "html_bytes": 105724,
+      "ratio": 80.46,
+      "golden_match": null
+    },
+    {
+      "id": "tcp-handshake",
+      "source": "local",
+      "path": "fixtures/tcp-handshake.md",
+      "input_bytes": 897,
+      "html_bytes": 101248,
+      "ratio": 112.87,
+      "golden_match": true
+    }
+  ],
+  "upstream": {
+    "command": "bun run test:upstream",
+    "status": "pass",
+    "requires_network": true,
+    "duration_ms": 181007,
+    "note": "pinned 4da5ae8 (v0.5.2); npm test with AM_E2E unset",
+    "tail": " * branch            4da5ae89ac435683110aa1b8707d9d4170184c55 -> FETCH_HEAD\nNote: switching to 'FETCH_HEAD'.\n\nYou are in 'detached HEAD' state. You can look around, make experimental\nchanges and commit them, and you can discard any commits you make in this\nstate without impacting any branches by switching back to a branch.\n\nIf you want to create a new branch to retain commits you create, you may\ndo so (now or later) by using -c with the switch command. Example:\n\n  git switch -c <new-branch-name>\n\nOr undo this operation with:\n\n  git switch -\n\nTurn off this advice by setting config variable advice.detachedHead to false\n\nHEAD is now at 4da5ae8 chore: release 0.5.2 (#203)\nnpm notice Beginning October 4, 2021, all connections to the npm registry - including for package installation - must use TLS 1.2 or higher. You are currently using plaintext http to connect. Please visit the GitHub blog for more information: https://github.blog/2021-08-23-npm-registry-deprecating-tls-1-0-tls-1-1/"
+  },
+  "gitleaks": {
+    "command": "bash scripts/gitleaks-detect.sh",
+    "status": "pass",
+    "version": "8.30.1",
+    "leaks_found": 0,
+    "duration_ms": 2382
+  }
+}

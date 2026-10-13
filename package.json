@@ -11,6 +11,7 @@
   "scripts": {
     "test": "bun test",
     "test:upstream": "bash scripts/upstream-npm-test.sh",
+    "report": "bun run scripts/report.ts",
     "check:skills": "bun run scripts/check-skills-frontmatter.ts",
     "golden:regen": "bun run scripts/regen-golden.ts",
     "audit": "bun audit",
