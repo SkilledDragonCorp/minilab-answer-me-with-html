@@ -1,10 +1,10 @@
 #!/usr/bin/env bun
 /** Regenerate fixtures/golden/tcp-handshake.html from fixtures/tcp-handshake.md */
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { renderDraft } from "../src/am-render.ts";
+import { normalizeGoldenHtml } from "../src/normalize-golden.ts";
 
 const ROOT = join(import.meta.dir, "..");
 const draft = join(ROOT, "fixtures", "tcp-handshake.md");
@@ -24,6 +24,9 @@ if (exitCode !== 0) {
   console.error(stderr || stdout);
   process.exit(exitCode);
 }
+
+const raw = readFileSync(out, "utf8");
+writeFileSync(out, normalizeGoldenHtml(raw), "utf8");
 
 writeFileSync(
   join(goldenDir, "README.txt"),

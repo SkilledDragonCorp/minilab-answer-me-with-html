@@ -3,6 +3,7 @@ import { readFileSync, mkdtempSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { renderDraft } from "../src/am-render.ts";
+import { normalizeGoldenHtml } from "../src/normalize-golden.ts";
 
 const ROOT = join(import.meta.dir, "..");
 const draft = join(ROOT, "fixtures", "tcp-handshake.md");
@@ -22,7 +23,7 @@ describe("am render golden", () => {
       if (exitCode !== 0) {
         console.error(stderr);
       }
-      const rendered = readFileSync(out, "utf8");
+      const rendered = normalizeGoldenHtml(readFileSync(out, "utf8"));
       const expected = readFileSync(golden, "utf8");
       expect(rendered).toBe(expected);
       expect(rendered).toContain("TCP three-way handshake");
