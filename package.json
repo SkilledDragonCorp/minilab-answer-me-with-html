@@ -1,0 +1,24 @@
+{
+  "name": "@skilleddragon/minilab-answer-me-with-html",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SkilledDragon minilab: answer-me-with-html skill, upstream npm test, Bun am render golden fixture",
+  "engines": {
+    "node": ">=24.11.0",
+    "bun": ">=1.2.0"
+  },
+  "scripts": {
+    "test": "bun test",
+    "test:upstream": "bash scripts/upstream-npm-test.sh",
+    "check:skills": "bun run scripts/check-skills-frontmatter.ts",
+    "golden:regen": "bun run scripts/regen-golden.ts",
+    "audit": "bun audit",
+    "hooks:install": "bash scripts/install-githooks.sh"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "answer-me-with-html": "github:QingYunA/answer-me-with-html#4da5ae89ac435683110aa1b8707d9d4170184c55",
+    "typescript": "^5.8.3"
+  }
+}

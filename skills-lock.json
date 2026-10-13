@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "answer-me-with-html": {
+      "source": "QingYunA/answer-me-with-html",
+      "sourceType": "github",
+      "skillPath": "skills/answer-me-with-html/SKILL.md",
+      "computedHash": "76a2bd24812f0aa1632d3e84f372639c64be3c55a1ff6adeafdddf8e0d1f0ac3"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+# Secrets and local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials.json
+secrets/
+
+# Dependencies and build
+node_modules/
+.pnpm-store/
+dist/
+build/
+*.tsbuildinfo
+
+# Bun (keep bun.lock committed)
+bun.lockb
+
+# Caches and logs
+.cache/
+.tmp/
+tmp/
+logs/
+*.log
+npm-debug.log*
+
+# Coverage and test artifacts
+coverage/
+.nyc_output/
+test-results/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Upstream clone (upstream-npm-test.sh uses temp or UPSTREAM_WORKDIR)
+.upstream-amwih/
+amwih-upstream/
+
+# Gitleaks local cache
+.gitleaks/
+tools/gitleaks
+
+# Skills install scratch (canonical skill is committed under .claude/skills)
+.throwaway-skills/
